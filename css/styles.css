@@ -82,11 +82,6 @@ section {
     color: #000;
 }
 
-.navbar__menu .menu__link:hover {
-    background: #333;
-    color: #fff;
-    transition: ease 0.3s all;
-}
 
 .navbar__menu .menu__link__active {
     background: #333;
@@ -227,4 +222,13 @@ section.your-active-class .landing__container::after {
 		           translate(-1em) 
 		           rotate(-360deg);
 	}
+}
+
+@media only screen and (min-width: 769px) {
+
+    .navbar__menu .menu__link:hover {
+        background: #333;
+        color: #fff;
+        transition: ease 0.3s all;
+    }
 }

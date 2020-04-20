@@ -1,7 +1,7 @@
 // Variable declarations
 const sections = document.getElementsByTagName('section');
 const navBar = document.getElementById("navbar__list");
-let liElement, dataType, idType, content, sectionId, elementToScroll;
+let liElement, dataType, idType, content, sectionId, elementToScroll, attr, a, box;
 let anchors = document.getElementsByTagName('a');
 
 // Function to create nav menu based on amount of sections and sections info.
@@ -35,9 +35,9 @@ function scrollTo() {
 // If it is, turn on active-class, if not, remove active-class.
 function makeActive() {
     for (let section of sections) { 
-        let attr = section.getAttribute('id');
-        let a = document.querySelector(`[href="${attr}"]`);
-        let box = section.getBoundingClientRect(); 
+        attr = section.getAttribute('id');
+        a = document.querySelector(`[href="${attr}"]`);
+        box = section.getBoundingClientRect(); 
         if (box.top <= 150 && box.bottom >= 150) { 
             section.classList.add('your-active-class');
             a.classList.add('menu__link__active');
